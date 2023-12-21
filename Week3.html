@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: #ff5995;
+      }
+      h2 {
+        text-align: center;
+        color: #8fd7e5;
+        border: 1px solid #ff5995;
+        padding: 15px;
+        font-size: 18px;
+        border-radius: 4px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        border-radius: 10px;
+      }
+      p {
+        line-height: 1.5;
+        font-size: 12px;
+        margin: 20px 0 10px;
+        text-align: justify;
+      }
+      hr {
+        height: 1px;
+        background-color: #8fd7e5;
+        border: none;
+      }
+      button {
+        display: block;
+        margin: 15px auto;
+        background: #ff599699;
+        border: 1px solid #8fd7e5;
+        border-radius: 5px;
+        padding: 5px;
+        font-size: 14px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        transition: all 200ms ease-in-out;
+        font-weight:lighter;
+      }
+
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+
+      .learn-more {
+        display: block;
+        padding-top: 10px;
+        text-decoration: none;
+        color: #ff5995;
+        font-size: 10px;
+        padding-bottom: 15px;
+      }
+
+      .learn-more:hover {
+        text-decoration: underline;
+      }
+      .footer {
+        text-align: center;
+      }
+      .container {
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 30px 30px;
+        background: linear-gradient(110.5deg, rgba(248, 196, 249, 0.66) 22.8%, rgba(253, 122, 4, 0.15) 64.6%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Music is an art 🎶</h1>
+      <h2>
+        <em>Without language</em>
+      </h2>
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuJf8Rxl04E4mTYxR42piOBkf6MipU97-RdA&usqp=CAU"
+        alt="headphones"
+      />
+      <hr />
+      <p>
+        <strong>Music</strong> is a universal language that transcends boundaries, resonating
+        with emotions and connecting people across cultures. Its rhythmic beats
+        and harmonious melodies have the power to evoke joy, sadness, and
+        everything in between. From <span style="background-color: lightblue;">classical symphonies to contemporary beats</span>,
+        music is an art form that enriches the human experience.
+      </p>
+
+      <a href="https://en.wikipedia.org/wiki/Music" class="learn-more">
+        👉Learn more on Wikipedia
+      </a>
+      <button class="listen-to-music">▶️Click-n-Listen</button>
+      <hr />
+      <p class="footer">Coded by <a href="" target="_blank">Deepthi B</a></p>
+    </div>
+    <script>
+        function goToPlaylist() {
+        let name = prompt("Enter your name: ");
+        let email = prompt("Enter your email: ");
+        let platform = prompt("What do you want to listen to? SheCodes playlist or Spotify?");
+        if (platform.toLowerCase().trim() === "shecodes") {
+            alert(`Hi, ${name}! Check inbox for the SheCodes playlist!`);
+        }
+        else {
+            alert(`Hi, ${name}! Check inbox for the Spotify playlist!`);
+        }
+        let h1 = document.querySelector("h1");
+        h1.innerHTML = "See you later, "+name+"!";
+        }
+        let listentoMusic =  document.querySelector(".listen-to-music");
+        listentoMusic.addEventListener("click",goToPlaylist);
+    </script>
+  </body>
+</html>
